@@ -36,9 +36,9 @@ this folder is dedicated to track my **progress** and keep **some of my solution
  you _found a bug_ :bug: or a _better way_ to solve a puzzle?
  
  you can email me at _anais.schlienger@lilo.org_ or reach me on [_linkedin_](https://www.linkedin.com/in/ana%C3%AFs-schlienger-06a117177/). 
- there is more about me on my [_website_](schliengeranais.com).
+ there is more about me on my [_website_](https://www.schliengeranais.com).
  
- if you wanna play or check out my codingame profile, [**_here it is_**](https://www.codingame.com/profile/5506ad5dc195bcaeebc58b2923c0490a2751164) !
+ if you wanna play or check out my codingame profile, [**_here it is_**](https://www.codingame.com/profile/5506ad5dc195bcaeebc58b2923c0490a2751164)!
 
  ~ **anais**
 
