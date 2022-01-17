@@ -27,3 +27,5 @@ this folder is dedicated to track my **progress** and keep **some of my solution
 ## medium
 ## hard
 ## very hard
+## bot programming
+- [in progress] [counting tictactoe](bot-programming/counting-tictactoe.js)  [![](_data/link.png)](https://www.codingame.com/multiplayer/bot-programming/counting-tictactoe)
