@@ -25,6 +25,7 @@ this folder is dedicated to track my **progress** and keep **some of my solution
 - [] [1. exampler](easy/path_to_example_2.py) [![](_data/link.png)](https://www.codingame.com/training/easy/1--ngr---basic-radar)
 
 ## medium
+- [progress] [minimax exercise](medium/minimax-exercise.js) [![](_data/link.png)](https://www.codingame.com/training/medium/minimax-exercise)
 ## hard
 ## very hard
 ## bot programming
