@@ -1,4 +1,4 @@
-# ![codingame-banner](codingame_banner.png)
+# ![codingame-banner](_data/codingame_banner.png)
 
 ## what is CodinGame?
 
@@ -21,8 +21,8 @@ this folder is dedicated to track my **progress** and keep **some of my solution
 
 ## easy
 
-- [] [0. example](easy/path_to_example.cpp) [![](link.png)](https://www.codingame.com/training/easy/1000000000d-world)
-- [] [1. exampler](easy/path_to_example_2.py) [![](link.png)](https://www.codingame.com/training/easy/1--ngr---basic-radar)
+- [] [0. example](easy/path_to_example.cpp) [![](_data/link.png)](https://www.codingame.com/training/easy/1000000000d-world)
+- [] [1. exampler](easy/path_to_example_2.py) [![](_data/link.png)](https://www.codingame.com/training/easy/1--ngr---basic-radar)
 
 ## medium
 ## hard
