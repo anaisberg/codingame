@@ -21,8 +21,7 @@ this folder is dedicated to track my **progress** and keep **some of my solution
 
 ## easy
 
-- [] [0. example](easy/path_to_example.cpp) [![](_data/link.png)](https://www.codingame.com/training/easy/1000000000d-world)
-- [] [1. exampler](easy/path_to_example_2.py) [![](_data/link.png)](https://www.codingame.com/training/easy/1--ngr---basic-radar)
+- [x] [ascii art](easy/ascii-art.js) [![](_data/link.png)](https://www.codingame.com/training/easy/ascii-art)
 
 ## medium
 - [progress] [minimax exercise](medium/minimax-exercise.js) [![](_data/link.png)](https://www.codingame.com/training/medium/minimax-exercise)
