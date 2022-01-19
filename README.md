@@ -24,7 +24,7 @@ this folder is dedicated to track my **progress** and keep **some of my solution
 - [x] [ascii art](easy/ascii-art.js) [![](_data/link.png)](https://www.codingame.com/training/easy/ascii-art)
 
 ## medium
-- [progress] [minimax exercise](medium/minimax-exercise.js) [![](_data/link.png)](https://www.codingame.com/training/medium/minimax-exercise)
+- [x] [minimax exercise](medium/minimax-exercise.js) [![](_data/link.png)](https://www.codingame.com/training/medium/minimax-exercise)
 ## hard
 ## very hard
 ## bot programming
