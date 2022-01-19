@@ -16,7 +16,7 @@ function createTree (leafs, depth, width) {
   let tree = getChildren(leafs)
   for (let i = depth - 1; i > 0; i--) {
     const newTree = []
-    const k = width ^ i / width
+    const k = Math.pow(width, i)
     for (let j = 0; j < k; j++) {
       newTree.push(tree.slice(j * width, j * width + width))
     }
@@ -30,22 +30,55 @@ function minimax (node, depth, maxi) {
     return [node, 1]
   } else if (maxi) {
     let value = -1500
-    let iter = 3500
+    let iter = 0
     for (let i = 0; i < node.length; i++) {
       const nextMinimax = minimax(node[i], depth - 1, false)
       value = Math.max(value, nextMinimax[0])
-      iter = Math.min(iter, nextMinimax[1])
+      iter += nextMinimax[1]
     }
-    return [value, iter + B + 1]
+    return [value, iter + 1]
   } else {
     let value = 1500
-    let iter = 3500
+    let iter = 0
     for (let i = 0; i < node.length; i++) {
       const nextMinimax = minimax(node[i], depth - 1, true)
       value = Math.min(value, nextMinimax[0])
-      iter = Math.min(iter, nextMinimax[1])
+      iter += nextMinimax[1]
     }
-    return [value, iter + 1 + B]
+    return [value, iter + 1]
+  }
+}
+
+function alphabeta (node, depth, alpha, beta, maxi) {
+  if (depth === 0) {
+    return [node[0], 1]
+  }
+  if (maxi) {
+    let value = -1500
+    let iter = 0
+    for (let i = 0; i < node.length; i++) {
+      const nextMinimax = alphabeta(node[i], depth - 1, alpha, beta, false)
+      value = Math.max(value, nextMinimax[0])
+      iter += nextMinimax[1]
+      if (value >= beta) {
+        break
+      }
+      alpha = Math.max(alpha, value)
+    }
+    return [value, iter + 1]
+  } else {
+    let value = 1500
+    let iter = 0
+    for (let i = 0; i < node.length; i++) {
+      const nextMinimax = alphabeta(node[i], depth - 1, alpha, beta, true)
+      value = Math.min(value, nextMinimax[0])
+      iter += nextMinimax[1]
+      if (value <= alpha) {
+        break
+      }
+      beta = Math.min(beta, value)
+    }
+    return [value, iter + 1]
   }
 }
 
