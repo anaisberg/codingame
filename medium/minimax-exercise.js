@@ -4,29 +4,48 @@
 // minimax: https://en.wikipedia.org/wiki/Minimax
 // alpha-beta pruning: https://en.wikipedia.org/wiki/Alpha-beta_pruning
 
-function getChildren (tree, width) {
+function getChildren (tree) {
   const child = []
-  const slice = tree.splice(0, width)
-  for (let i = 0; i < slice.length; i++) {
-    child.push(parseInt(slice[i]))
+  for (let i = 0; i < tree.length; i++) {
+    child.push([parseInt(tree[i])])
   }
   return child
 }
 
-function minimax (tree, depth, maxi) {
-  const nextNode = getChildren(LEAFS, B)
-  if (depth === D - 1) {
-    if (maxi) {
-      return [Math.max(...nextNode), B + 1]
-    } else {
-      return [Math.min(...nextNode), B + 1]
+function createTree (leafs, depth, width) {
+  let tree = getChildren(leafs)
+  for (let i = depth - 1; i > 0; i--) {
+    const newTree = []
+    const k = width ^ i / width
+    for (let j = 0; j < k; j++) {
+      newTree.push(tree.slice(j * width, j * width + width))
     }
+    tree = newTree
+  }
+  return tree
+}
+
+function minimax (node, depth, maxi) {
+  if (depth === 0) {
+    return [node, 1]
   } else if (maxi) {
-    const nextMinimax = minimax(tree, depth + 1, false)
-    return [Math.max(nextMinimax[0], Math.max(...nextNode)), nextMinimax[1] + 1 + B + 1]
+    let value = -1500
+    let iter = 3500
+    for (let i = 0; i < node.length; i++) {
+      const nextMinimax = minimax(node[i], depth - 1, false)
+      value = Math.max(value, nextMinimax[0])
+      iter = Math.min(iter, nextMinimax[1])
+    }
+    return [value, iter + B + 1]
   } else {
-    const nextMinimax = minimax(tree, depth + 1, true)
-    return [Math.min(nextMinimax[0], Math.min(...nextNode)), nextMinimax[1] + 1 + B + 1]
+    let value = 1500
+    let iter = 3500
+    for (let i = 0; i < node.length; i++) {
+      const nextMinimax = minimax(node[i], depth - 1, true)
+      value = Math.min(value, nextMinimax[0])
+      iter = Math.min(iter, nextMinimax[1])
+    }
+    return [value, iter + 1 + B]
   }
 }
 
@@ -34,6 +53,7 @@ const inputs = readline().split(' ')
 const D = parseInt(inputs[0])
 const B = parseInt(inputs[1])
 const LEAFS = readline().split(' ')
+const tree = createTree(LEAFS, D, B)
 
-const result = minimax(LEAFS, 0, true)
+const result = minimax(tree, D, true)
 console.log(result[0] + ' ' + result[1])
