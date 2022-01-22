@@ -22,6 +22,7 @@ this folder is dedicated to track my **progress** and keep **some of my solution
 ## easy
 
 - [x] [ascii art](easy/ascii-art.js) [![](_data/link.png)](https://www.codingame.com/training/easy/ascii-art)
+- [x] [power of thor - episode 1](easy/power-of-thor-episode-1.js) [![](_data/link.png)](https://www.codingame.com/training/easy/power-of-thor-episode-1)
 
 ## medium
 - [x] [minimax exercise](medium/minimax-exercise.js) [![](_data/link.png)](https://www.codingame.com/training/medium/minimax-exercise)
